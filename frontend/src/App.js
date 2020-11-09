@@ -39,7 +39,7 @@ function App() {
       <div className="grid-container">
         <header className="row">
           <div>
-            <button onClick={openMenu}>&#9776;</button>
+            <button className="btwlat" onClick={openMenu}>&#9776;</button>
             <Link className="brand" to="/">
               blackhawk
             </Link>
