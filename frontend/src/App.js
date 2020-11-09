@@ -37,11 +37,9 @@ function App() {
   return (
     <BrowserRouter>
       <div className="grid-container">
-        <header className="row">
+        <header className="header">
           <div>
-            <button onClick={openMenu}>
-              &#9776;
-            </button>
+            <button onClick={openMenu}>&#9776;</button>
             <Link className="brand" to="/">
               blackhawk
             </Link>

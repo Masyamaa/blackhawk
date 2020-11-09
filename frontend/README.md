@@ -284,3 +284,21 @@
 43. Filter and Sort Product
     1. create filter and sort
     2. create lateral menu
+
+44. Rate and Review Products
+    1. link fontawesome
+    2. create stars based on props.value
+    3. show text based on props.text
+    4. style rating, span color gold and last span to gray, link text to blue
+    5. use Rating component
+    6. use Rating component, wrap it in anchor#reviews
+    7. list reviews after product details
+    8. create new review form to get rating and reviews
+    9. style reviews
+    10. implement submitHandler
+    11. create saveProductReview(productId, review)
+    12. create product review constants
+    13. create productReviewSaveReducer
+    14. add productReviewSaveReducer
+    15. router.post('/:id/reviews')
+    16. update avg rating
