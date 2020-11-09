@@ -281,4 +281,6 @@
     19. Set database connection in heroku env variables
     20. Commit and push
 
-43. 
+43. Filter and Sort Product
+    1. create filter and sort
+    2. create lateral menu

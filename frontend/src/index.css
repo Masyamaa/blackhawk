@@ -28,6 +28,10 @@ body {
 header {
   grid-area: header;
   background-color: #203040;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
 }
 main {
   grid-area: main;
@@ -37,6 +41,43 @@ footer {
   grid-area: footer;
   background-color: #203040;
   color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sidebar */
+.brand button {
+  font-size: 3rem;
+  padding: .5rem;
+  background: none;
+  border: none;
+  color:#ffffff;
+  cursor: pointer;
+}
+.sidebar{
+  position: fixed;
+  transition: all .5s;
+  transform: translateX(-30rem);
+  width: 30rem;
+  background-color: #f0f0f0;
+  height: 100%;
+}
+.sidebar.open{
+  transform: translateX(0);
+}
+.sidebar-close-button{
+  border-radius: 50%;
+  border: .1rem #000000 solid;
+  width: 3rem;
+  height: 3rem;
+  padding: .5rem;
+  font-size: 2rem;
+  padding-top: 0;
+  cursor: pointer;
+  position: absolute;
+  right: .5rem;
+  top: 1.5rem
 }
 
 /* Common */
@@ -269,4 +310,38 @@ img.large {
 }
 .table button {
   margin: 0 0.2rem;
+}
+
+/* filter */
+
+.filter{
+  display: flex;
+  list-style-type: none;
+  margin: 1rem auto;
+  max-width: 37rem;
+  justify-content: space-between;
+  justify-items: center;
+  padding: 1rem;
+  
+}
+.filter input,
+.filter button,
+.filter select{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border:.1rem #c0c0c0 solid;
+  font-size: 1.1rem;
+}
+.categories{
+
+  padding: 0;
+  list-style-type: none;
+}
+.categories a{
+  display: flex;
+  padding: 1rem;
+}
+
+.categories a:hover{
+  background-color: #c0c0c0;
 }

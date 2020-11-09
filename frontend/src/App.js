@@ -24,6 +24,12 @@ function App() {
   const { cartItems } = cart;
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
+  const openMenu = () => {
+    document.querySelector(".sidebar").classList.add("open");
+  }
+  const closeMenu = () => {
+    document.querySelector(".sidebar").classList.remove("open")
+  }
   const dispatch = useDispatch();
   const signoutHandler = () => {
     dispatch(signout());
@@ -33,6 +39,9 @@ function App() {
       <div className="grid-container">
         <header className="row">
           <div>
+            <button onClick={openMenu}>
+              &#9776;
+            </button>
             <Link className="brand" to="/">
               blackhawk
             </Link>
@@ -89,6 +98,18 @@ function App() {
             )}
           </div>
         </header>
+        <aside className="sidebar">
+          <h3>Categorias</h3>
+          <button className="sidebar-close-button" onClick={closeMenu}>x</button>
+          <ul className="categories">
+            <li>
+              <Link to="/category/Calças" onClick={closeMenu}>Calças</Link>
+            </li>
+            <li>
+              <Link to="/category/Camisas" onClick={closeMenu}>Camisas</Link>
+            </li>
+          </ul>
+        </aside>
         <main>
           <Route path="/cart/:id?" component={CartScreen}></Route>
           <Route path="/product/:id" component={ProductScreen} exact></Route>
@@ -104,6 +125,7 @@ function App() {
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
           <Route path="/order/:id" component={OrderScreen}></Route>
           <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
+          <Route path="/category/:id" component={HomeScreen}></Route>
           <PrivateRoute
             path="/profile"
             component={ProfileScreen}
@@ -118,7 +140,7 @@ function App() {
           ></AdminRoute>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
-        <footer className="row center">Todos os direitos reservados.</footer>
+        <footer className="row center">Todos os direitos reservados. Site desenvolvido para fins acadêmicos.</footer>
       </div>
     </BrowserRouter>
   );
