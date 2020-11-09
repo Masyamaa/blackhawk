@@ -47,14 +47,6 @@ footer {
 }
 
 /* Sidebar */
-.row button {
-  font-size: 3rem;
-  padding: 0;
-  background: none;
-  border: none;
-  color:#ffffff;
-  cursor: pointer;
-}
 .sidebar{
   position: fixed;
   transition: all .5s;
@@ -159,6 +151,14 @@ a.brand {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+.row button {
+  font-size: 3rem;
+  padding: 0;
+  background: none;
+  border: none;
+  color:#ffffff;
+  cursor: pointer;
 }
 .row.center {
   justify-content: center;
