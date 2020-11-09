@@ -47,6 +47,14 @@ footer {
 }
 
 /* Sidebar */
+.row button {
+  font-size: 3rem;
+  padding: 0;
+  background: none;
+  border: none;
+  color:#ffffff;
+  cursor: pointer;
+}
 .sidebar{
   position: fixed;
   transition: all .5s;
@@ -129,14 +137,6 @@ button.small {
 }
 
 /* Header */
-.header button {
-  font-size: 3rem;
-  padding: .5rem;
-  background: none;
-  border: none;
-  color:#ffffff;
-  cursor: pointer;
-}
 header a {
   color: #ffffff;
   padding: 1rem;
@@ -312,7 +312,7 @@ img.large {
   margin: 0 0.2rem;
 }
 
-/* Filter */
+/* filter */
 
 .filter{
   display: flex;

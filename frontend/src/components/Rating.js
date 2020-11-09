@@ -1,15 +1,16 @@
 import React from 'react';
 
 export default function Rating(props) {
-  const { rating, numReviews } = props;
-  return (
+  return !props.value ? (
+    <div></div>
+  ) : (
     <div className="rating">
       <span>
         <i
           className={
-            rating >= 1
+            props.value >= 1
               ? 'fa fa-star'
-              : rating >= 0.5
+              : props.value >= 0.5
               ? 'fa fa-star-half-o'
               : 'fa fa-star-o'
           }
@@ -18,9 +19,9 @@ export default function Rating(props) {
       <span>
         <i
           className={
-            rating >= 2
+            props.value >= 2
               ? 'fa fa-star'
-              : rating >= 1.5
+              : props.value >= 1.5
               ? 'fa fa-star-half-o'
               : 'fa fa-star-o'
           }
@@ -29,9 +30,9 @@ export default function Rating(props) {
       <span>
         <i
           className={
-            rating >= 3
+            props.value >= 3
               ? 'fa fa-star'
-              : rating >= 2.5
+              : props.value >= 2.5
               ? 'fa fa-star-half-o'
               : 'fa fa-star-o'
           }
@@ -40,9 +41,9 @@ export default function Rating(props) {
       <span>
         <i
           className={
-            rating >= 4
+            props.value >= 4
               ? 'fa fa-star'
-              : rating >= 3.5
+              : props.value >= 3.5
               ? 'fa fa-star-half-o'
               : 'fa fa-star-o'
           }
@@ -51,15 +52,15 @@ export default function Rating(props) {
       <span>
         <i
           className={
-            rating >= 5
+            props.value >= 5
               ? 'fa fa-star'
-              : rating >= 4.5
+              : props.value >= 4.5
               ? 'fa fa-star-half-o'
               : 'fa fa-star-o'
           }
         ></i>
       </span>
-      <span>{numReviews + ' avaliações'}</span>
+      <span>{props.text ? props.text : ''}</span>
     </div>
   );
 }
